@@ -24,18 +24,62 @@ Each task produces a video with first/last frame + prompt. Demo samples are in [
 
 ## Quick Start
 
-```bash
-# 1. Install
-pip install -e .
+### Step 1: Install Python Dependencies
 
-# 2. Install Blender 3.6 (one-time)
+```bash
+# Clone the repository
+git clone https://github.com/XinyangHan/objaverse-3d-video-generator.git
+cd objaverse-3d-video-generator
+
+# Install Python dependencies
+pip install -r requirements.txt
+# OR install in editable mode
+pip install -e .
+```
+
+### Step 2: Install Blender 3.6+
+
+#### macOS (Homebrew)
+```bash
+brew install --cask blender
+```
+
+#### Linux
+```bash
 wget https://download.blender.org/release/Blender3.6/blender-3.6.0-linux-x64.tar.xz
 tar xf blender-3.6.0-linux-x64.tar.xz -C /tmp/
-
-# 3. Generate samples
-python examples/generate.py --task shape_extrapolation --num-samples 100
-python examples/generate.py --task all --num-samples 400  # 100 per task
 ```
+
+#### Verify Installation
+```bash
+blender --version  # Should show Blender 3.6.0 or higher
+```
+
+### Step 3: Fix SSL Certificate (macOS with Python.org Python)
+
+If you installed Python from python.org, you may need to install SSL certificates:
+
+```bash
+# Python 3.12
+/Applications/Python\ 3.12/Install\ Certificates.command
+
+# Python 3.11
+/Applications/Python\ 3.11/Install\ Certificates.command
+```
+
+Or double-click `Install Certificates.command` in the Python folder in Applications.
+
+### Step 4: Generate Samples
+
+```bash
+# Generate 10 samples (first run will download 3D objects, ~5GB, may take hours)
+python examples/generate.py --task shape_extrapolation --num-samples 10
+
+# Generate all task types
+python examples/generate.py --task all --num-samples 40  # 10 per task
+```
+
+**⚠️ First Run Note**: The first execution will download 4,867 3D models from Objaverse (~5GB). This is a one-time download and will be cached in `~/.objaverse/`. Subsequent runs will use the cached files.
 
 ## Output Format
 
