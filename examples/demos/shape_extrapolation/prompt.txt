@@ -1,0 +1,1 @@
+A camera orbits 360 degrees around a 3D object. Given the first 75% of the video (270 degrees of rotation), predict what the object looks like from the remaining unseen angles. Generate the final 25% of frames showing the back side of the object.

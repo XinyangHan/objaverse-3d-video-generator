@@ -1,0 +1,1 @@
+A camera orbits around two 3D objects. As the camera moves, one object progressively occludes the other. Given the first 75% of the video, predict how the occlusion pattern changes in the remaining frames.

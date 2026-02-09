@@ -1,0 +1,1 @@
+A camera zooms steadily toward a 3D object from a fixed angle. Given the first 75% of the zoom sequence, predict the remaining frames showing the object at closer range with increasing detail.

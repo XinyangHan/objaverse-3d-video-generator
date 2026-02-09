@@ -11,6 +11,17 @@ A data generator for 3D video reasoning tasks using [Blender](https://www.blende
 | `depth_parallax` | 3 | Lateral pan | Predict depth-dependent parallax motion |
 | `zoom_consistency` | 1 | Straight zoom | Predict appearance at closer distance |
 
+## Demos
+
+Each task produces a video with first/last frame + prompt. Demo samples are in [`examples/demos/`](examples/demos/).
+
+| Task | First Frame | Last Frame | Video |
+|------|-------------|------------|-------|
+| **Shape Extrapolation** | <img src="examples/demos/shape_extrapolation/first_frame.png" width="150"> | <img src="examples/demos/shape_extrapolation/final_frame.png" width="150"> | [ground_truth.mp4](examples/demos/shape_extrapolation/ground_truth.mp4) |
+| **Occlusion Dynamics** | <img src="examples/demos/occlusion_dynamics/first_frame.png" width="150"> | <img src="examples/demos/occlusion_dynamics/final_frame.png" width="150"> | [ground_truth.mp4](examples/demos/occlusion_dynamics/ground_truth.mp4) |
+| **Depth Parallax** | <img src="examples/demos/depth_parallax/first_frame.png" width="150"> | <img src="examples/demos/depth_parallax/final_frame.png" width="150"> | [ground_truth.mp4](examples/demos/depth_parallax/ground_truth.mp4) |
+| **Zoom Consistency** | <img src="examples/demos/zoom_consistency/first_frame.png" width="150"> | <img src="examples/demos/zoom_consistency/final_frame.png" width="150"> | [ground_truth.mp4](examples/demos/zoom_consistency/ground_truth.mp4) |
+
 ## Quick Start
 
 ```bash

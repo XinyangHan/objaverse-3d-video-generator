@@ -1,0 +1,1 @@
+A camera moves laterally across a scene containing three 3D objects at different depths. Near objects appear to move faster than far objects (parallax effect). Given the first 75% of the camera's lateral movement, predict the remaining frames.
